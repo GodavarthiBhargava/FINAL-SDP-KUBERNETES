@@ -71,7 +71,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: godavarthibhargava/k8-sdp-final-backend:hackathon  # <-- change this
+          image: godavarthibhargava/k8-sdp-final-backend:hackathon1 # <-- change this
           ports:
             - containerPort: 2000
 ---
@@ -87,7 +87,7 @@ spec:
     - protocol: TCP
       port: 2000
       targetPort: 2000
-      nodePort: 30048      # Optional fixed NodePort (range 30000–32767)
+      nodePort: 30048     # Optional fixed NodePort (range 30000–32767)
   type: NodePort
 ---
 # ===========================
@@ -110,7 +110,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: godavarthibhargava/k8-sdp-final-frontend:hackathon  # <-- change this
+          image: godavarthibhargava/k8-sdp-final-frontend:hackathon1  # <-- change this
           ports:
             - containerPort: 80
 ---
@@ -126,7 +126,7 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 80
-      nodePort: 30051        # Optional fixed NodePort (range 30000–32767)
+      nodePort: 30051       # Optional fixed NodePort (range 30000–32767)
   type: NodePort
 
 
